@@ -1,5 +1,5 @@
 
-## Automatizando - Robot Framework
+# Automatizando - Robot Framework
 
 ## Sobre
   Processo de aprendizagem do Robot, automatizando um sistema de chamada de senhas (SGA Lite).
@@ -18,7 +18,7 @@
   - SGA Lite instalado
 
 ## Sobre o SGA Lite
-  O SGA Lite é um sistema de propriedade da empresa In9 Mídia Soluções digitais e seu uso deve ser feito de acordo com as normas estabelecidas por ela.
+  O SGA Lite é um sistema de propriedade da empresa In9 Mídia Soluções Digitais e seu uso deve ser feito de acordo com as normas estabelecidas por ela.
   Para maiores informações, acesse: https://www.in9midia.com/
 ## Assista o Robot agindo
   [![Watch the video](https://img.youtube.com/vi/Jf8LN47w94s/maxresdefault.jpg)](https://youtu.be/Jf8LN47w94s)
