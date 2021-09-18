@@ -1,5 +1,5 @@
 
-## Automatizando Robot Framework
+## Automatizando - Robot Framework
 
 ## Sobre
   Processo de aprendizagem do Robot, automatizando um sistema de chamada de senhas (SGA Lite).
