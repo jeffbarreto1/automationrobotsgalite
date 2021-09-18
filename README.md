@@ -21,4 +21,5 @@
   O SGA Lite é um sistema de propriedade da empresa In9 Mídia Soluções Digitais e seu uso deve ser feito de acordo com as normas estabelecidas por ela.
   Para maiores informações, acesse: https://www.in9midia.com/
 ## Assista o Robot agindo
-  [![Watch the video](https://img.youtube.com/vi/Jf8LN47w94s/maxresdefault.jpg)](https://youtu.be/Jf8LN47w94s)
+  ![automacao_sgaLite](https://user-images.githubusercontent.com/33812040/133909390-53ef5df8-6ea7-4857-9a1f-43217cb1d532.gif)
+  [Veja no YouTube](https://youtu.be/Jf8LN47w94s)
