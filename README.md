@@ -16,7 +16,7 @@
   Script criado com Robot Framework com as bibliotecas:
   - [SeleniumLibrary](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html)
 
- ### Pré-requisitos
+ ## Pré-requisitos
   - Python instalado
   - Robot Framework instalado
   - SGA Lite instalado
@@ -24,3 +24,5 @@
 ## Sobre o SGA Lite
   O SGA Lite é um sistema fornecido pela In9 Mídia Soluções digitais e seu uso deve ser feito de acordo com as normas estabelecidas por ela.
   Para maiores informações, acesse: https://www.in9midia.com/
+## Assista o Robot agindo
+  [![Watch the video](https://img.youtube.com/vi/Jf8LN47w94s/maxresdefault.jpg)](https://youtu.be/Jf8LN47w94s)
