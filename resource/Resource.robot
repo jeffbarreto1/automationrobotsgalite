@@ -15,10 +15,10 @@ Dado que acesso a página de login
     Maximize Browser Window 
     Page Should Contain Element     name=login.form
 
-Quando submeto meu "${LOGIN}"
+Quando submeto meu Login
     Input Text      id=login-user   ${LOGIN} 
 
-E submeto meu ${PASSWORD}
+E submeto meu Password
     Input Password  id=login-password   ${PASSWORD}
         
 Então devo ser direcionado para área logada
@@ -30,27 +30,21 @@ Dado que clico em "${CADASTRAR}"
     Click Element                   xpath=//a[contains(.,'${CADASTRAR}')]
     Page Should Contain Element     xpath=//h2[contains(.,'${CADASTRAR}')]
 
-E clico no botão Novo Guichê
-    Wait Until Element Is Visible   xpath=//button[contains(.,'Novo Guichê')]
-    Click Element                   xpath=//button[contains(.,'Novo Guichê')]
+E clico no botão "${CRIANDO_NOVO}"
+    Wait Until Element Is Visible   xpath=//button[contains(.,'${CRIANDO_NOVO}')]
+    Click Element                   xpath=//button[contains(.,'${CRIANDO_NOVO}')]
     Wait Until Element Is Visible   class=modal-body
     Page Should Contain Element     xpath=//span[contains(@class,'ng-scope')]
     
-E crio um novo "${GUICHE}"
+E crio um novo guichê com o nome "${GUICHE}"
     Input Text                              name=description   ${GUICHE}
     Click Element                           xpath=//button[contains(.,'Salvar')]
     Wait Until Element Is Not Visible       xpath=//button[contains(.,'Salvar')]
 
 Então devo encontrar o novo "${GUICHE}" listado
     Page Should Contain Element             xpath=//td[contains(.,'${GUICHE}')]
-    
-E clico no botão Novo Monitor
-    Wait Until Element Is Visible   xpath=//button[contains(.,'Novo Monitor')]
-    Click Element                   xpath=//button[contains(.,'Novo Monitor')]
-    Wait Until Element Is Visible   class=modal-body
-    Page Should Contain Element     name=url
 
-E adiciono um novo "${MONITOR}"
+E adiciono um novo monitor chamado "${MONITOR}"
     Input Text                              name=description    ${MONITOR}
     Clear Element Text                      xpath=//input[contains(@type,'url')]
     Input Text                              xpath=//input[contains(@type,'url')]    ${URL_MONITOR}
@@ -64,13 +58,7 @@ Então devo encontrar o novo "${MONITOR}" cadastrado
     Wait Until Element Is Visible           xpath=//td[contains(.,'${KEY_MONITOR}')]
     Page Should Contain Element             xpath=//td[contains(.,'${KEY_MONITOR}')]
 
-E clico no botão Novo Serviço
-    Wait Until Element Is Visible   xpath=//button[@type='button'][contains(.,'Novo Serviço')]
-    Click Element                   xpath=//button[@type='button'][contains(.,'Novo Serviço')]
-    Wait Until Element Is Visible   class=modal-body
-    Page Should Contain Element     name=callText
-
-E cadastro um novo "${SERVIÇO}"
+E cadastro um novo serviço chamado "${SERVIÇO}"
     Input Text                              name=description    ${SERVIÇO}
     Input Text                              name=abbreviation   ${SIGLA}
     Click Element                           xpath=//input[contains(@type,'text')]
@@ -80,7 +68,7 @@ E cadastro um novo "${SERVIÇO}"
 
 Então devo encontrar o novo "${SERVIÇO}"
     Wait Until Element Is Visible           xpath=//td[contains(.,'${SERVIÇO}')]
-    Page Should Contain Element             xpath=//td[contains(.,'${SERVIÇO}')]
+    Page Should Contain Element             xpath=//td[contains(.,'${SERVIÇO}')]  
     
 E seleciono um Guichê
     Wait Until Element Is Visible   id=keyboard-counter
@@ -91,11 +79,11 @@ E Seleciono um Serviço
     Click Element                   id=keyboard-service
     Click Element                   xpath=//*[@id="keyboard-service"]/option[1]
 
-E digito uma Senha
+E digito uma Senha: "${SENHA}"
     Click Element                   id=keyboard-number
     Input Text                      id=keyboard-number    ${SENHA}
     
-E digito o nome a ser chamado
+E digito o nome a ser chamado: "${NAME_CHAMADA}"
     Click Element                   id=keyboard-number
     Input Text                      id=keyboard-name    ${NAME_CHAMADA}
     
