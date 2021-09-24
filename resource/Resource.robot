@@ -44,10 +44,6 @@ E crio um novo "${GUICHE}"
 Então devo encontrar o novo "${GUICHE}" listado
     Page Should Contain Element             xpath=//td[contains(.,'${GUICHE}')]
     
-#Dado que clico em Cadastrar Monitor
-#    Click Element                   xpath=//a[contains(.,'Cadastrar Monitor')]
-#    Page Should Contain Element     xpath=//h2[contains(.,'Cadastrar Monitor')]
-
 E clico no botão Novo Monitor
     Wait Until Element Is Visible   xpath=//button[contains(.,'Novo Monitor')]
     Click Element                   xpath=//button[contains(.,'Novo Monitor')]
@@ -68,10 +64,6 @@ Então devo encontrar o novo "${MONITOR}" cadastrado
     Wait Until Element Is Visible           xpath=//td[contains(.,'${KEY_MONITOR}')]
     Page Should Contain Element             xpath=//td[contains(.,'${KEY_MONITOR}')]
 
-#Dado que clico em Cadastrar Serviço
-#    Click Element                   xpath=//a[contains(.,'Cadastrar Serviço')]
-#    Page Should Contain Element     xpath=//h2[contains(.,'Cadastrar Serviço')]
-
 E clico no botão Novo Serviço
     Wait Until Element Is Visible   xpath=//button[@type='button'][contains(.,'Novo Serviço')]
     Click Element                   xpath=//button[@type='button'][contains(.,'Novo Serviço')]
@@ -89,11 +81,6 @@ E cadastro um novo "${SERVIÇO}"
 Então devo encontrar o novo "${SERVIÇO}"
     Wait Until Element Is Visible           xpath=//td[contains(.,'${SERVIÇO}')]
     Page Should Contain Element             xpath=//td[contains(.,'${SERVIÇO}')]
-    
-#Dado que clico em Chamar Senha Avulsa
-#    Wait Until Element Is Visible   xpath=//a[contains(.,'Chamar Senha Avulsa')]
-#    Click Element                   xpath=//a[contains(.,'Chamar Senha Avulsa')]
-#    Page Should Contain Element     xpath=//h2[contains(.,'Chamar Senha Avulsa')]
     
 E seleciono um Guichê
     Wait Until Element Is Visible   id=keyboard-counter
