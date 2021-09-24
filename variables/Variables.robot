@@ -13,3 +13,23 @@ ${SENHA}
 ${NAME_CHAMADA}     
 ${CADASTRAR}
 ${CRIANDO_NOVO}
+
+#LOCATOR
+${NAME_LOGINFORM}                       name=login.form
+${ID_INPUTLOGIN}                        id=login-user
+${ID_INPUTPASSWORD}                     id=login-password
+${BOTAO_ENVIAR}                          xpath=//button[contains(.,'Enviar')]
+${BOTAO_ALTERARSENHA}                   xpath=//button[@type='button'][contains(.,'Alterar Senha')]
+${ELEMENTO_H2INICIO}                    xpath=//h2[contains(.,'Início')]
+${CLASS_MODALBODY}                      class=modal-body
+${ELEMENTO_NGSCOPE}                     xpath=//span[contains(@class,'ng-scope')]
+${BOTAO_SALVAR}                         xpath=//button[contains(.,'Salvar')]
+${INPUT_URLMONITOR}                     xpath=//input[contains(@type,'url')]
+${INPUT_KEY}                            name=key
+${CLICK_SELECTSERVICO_MONITOR}          xpath=//input[contains(@type,'text')]
+${CLICK_SELECTACOUGUE}                  xpath=//span[@class='ng-binding ng-scope'][contains(.,'Açougue')]
+${CLASS_NGBINDING}                      class=ng-binding
+${ID_KEYBOARDCOUNTER}                   id=keyboard-counter
+${INPUT_SERVICO_KEYBOARD}               xpath=//*[@id="keyboard-service"]/option[1]
+${ID_KEYBOARDNUMBER}                    id=keyboard-number
+${ID_KEYBOARDNAME}                      id=keyboard-name

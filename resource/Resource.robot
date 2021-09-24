@@ -13,18 +13,18 @@ Fechar navegador
 Dado que acesso a página de login
     Go To                           ${URL}
     Maximize Browser Window 
-    Page Should Contain Element     name=login.form
+    Page Should Contain Element     ${NAME_LOGINFORM}
 
 Quando submeto meu Login
-    Input Text      id=login-user   ${LOGIN} 
+    Input Text      ${ID_INPUTLOGIN}   ${LOGIN} 
 
 E submeto meu Password
-    Input Password  id=login-password   ${PASSWORD}
+    Input Password  ${ID_INPUTPASSWORD}   ${PASSWORD}
         
 Então devo ser direcionado para área logada
-    Click Element                   xpath=//button[contains(.,'Enviar')]
-    Wait Until Element Is Visible   xpath=//button[@type='button'][contains(.,'Alterar Senha')]
-    Page Should Contain Element     xpath=//h2[contains(.,'Início')]
+    Click Element                   ${BOTAO_ENVIAR}
+    Wait Until Element Is Visible   ${BOTAO_ALTERARSENHA}
+    Page Should Contain Element     ${ELEMENTO_H2INICIO}
     
 Dado que clico em "${CADASTRAR}"
     Click Element                   xpath=//a[contains(.,'${CADASTRAR}')]
@@ -33,26 +33,26 @@ Dado que clico em "${CADASTRAR}"
 E clico no botão "${CRIANDO_NOVO}"
     Wait Until Element Is Visible   xpath=//button[contains(.,'${CRIANDO_NOVO}')]
     Click Element                   xpath=//button[contains(.,'${CRIANDO_NOVO}')]
-    Wait Until Element Is Visible   class=modal-body
-    Page Should Contain Element     xpath=//span[contains(@class,'ng-scope')]
+    Wait Until Element Is Visible   ${CLASS_MODALBODY}
+    Page Should Contain Element     ${ELEMENTO_NGSCOPE}
     
 E crio um novo guichê com o nome "${GUICHE}"
     Input Text                              name=description   ${GUICHE}
-    Click Element                           xpath=//button[contains(.,'Salvar')]
-    Wait Until Element Is Not Visible       xpath=//button[contains(.,'Salvar')]
+    Click Element                           ${BOTAO_SALVAR}
+    Wait Until Element Is Not Visible       ${BOTAO_SALVAR}
 
 Então devo encontrar o novo "${GUICHE}" listado
     Page Should Contain Element             xpath=//td[contains(.,'${GUICHE}')]
 
 E adiciono um novo monitor chamado "${MONITOR}"
-    Input Text                              name=description    ${MONITOR}
-    Clear Element Text                      xpath=//input[contains(@type,'url')]
-    Input Text                              xpath=//input[contains(@type,'url')]    ${URL_MONITOR}
-    Input Text                              name=key            ${KEY_MONITOR}
-    Click Element                           xpath=//input[contains(@type,'text')]
-    Click Element                           xpath=//span[@class='ng-binding ng-scope'][contains(.,'Açougue')]
-    Click Element                           xpath=//button[contains(.,'Salvar')]
-    Wait Until Element Is Not Visible       class=ng-binding
+    Input Text                              name=description                ${MONITOR}
+    Clear Element Text                      ${INPUT_URLMONITOR}
+    Input Text                              ${INPUT_URLMONITOR}             ${URL_MONITOR}
+    Input Text                              ${INPUT_KEY}                    ${KEY_MONITOR}
+    Click Element                           ${CLICK_SELECTSERVICO_MONITOR}
+    Click Element                           ${CLICK_SELECTACOUGUE}
+    Click Element                           ${BOTAO_SALVAR}
+    Wait Until Element Is Not Visible       ${CLASS_NGBINDING}
     
 Então devo encontrar o novo "${MONITOR}" cadastrado
     Wait Until Element Is Visible           xpath=//td[contains(.,'${KEY_MONITOR}')]
@@ -61,10 +61,10 @@ Então devo encontrar o novo "${MONITOR}" cadastrado
 E cadastro um novo serviço chamado "${SERVIÇO}"
     Input Text                              name=description    ${SERVIÇO}
     Input Text                              name=abbreviation   ${SIGLA}
-    Click Element                           xpath=//input[contains(@type,'text')]
+    Click Element                           ${CLICK_SELECTSERVICO_MONITOR}
     Click Element                           xpath=//span[@class='ng-binding ng-scope'][contains(.,'${MONITOR}')]
-    Click Element                           xpath=//button[contains(.,'Salvar')]
-    Wait Until Element Is Not Visible       class=ng-binding
+    Click Element                           ${BOTAO_SALVAR}
+    Wait Until Element Is Not Visible       ${CLASS_NGBINDING}
 
 Então devo encontrar o novo "${SERVIÇO}"
     Wait Until Element Is Visible           xpath=//td[contains(.,'${SERVIÇO}')]
@@ -76,16 +76,16 @@ E seleciono um Guichê
     Click Element                   xpath=//*[@id="keyboard-counter"]/option[1]
 
 E Seleciono um Serviço
-    Click Element                   id=keyboard-service
-    Click Element                   xpath=//*[@id="keyboard-service"]/option[1]
+    Click Element                   ${ID_KEYBOARDCOUNTER}
+    Click Element                   ${INPUT_SERVICO_KEYBOARD}
 
 E digito uma Senha: "${SENHA}"
-    Click Element                   id=keyboard-number
-    Input Text                      id=keyboard-number    ${SENHA}
+    Click Element                   ${ID_KEYBOARDNUMBER}
+    Input Text                      ${ID_KEYBOARDNUMBER}    ${SENHA}
     
 E digito o nome a ser chamado: "${NAME_CHAMADA}"
-    Click Element                   id=keyboard-number
-    Input Text                      id=keyboard-name    ${NAME_CHAMADA}
+    Click Element                   ${ID_KEYBOARDNUMBER}
+    Input Text                      ${ID_KEYBOARDNAME}      ${NAME_CHAMADA}
     
 Então clico no botão Enviar
-    Click Element                       xpath=//button[contains(.,'Enviar')]
+    Click Element                       ${BOTAO_ENVIAR}
