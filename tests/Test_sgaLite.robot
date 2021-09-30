@@ -7,33 +7,33 @@ Suite Teardown   Fechar navegador
 *** Test Cases ***
 
 Caso de Teste 01: Realizar login
-    Dado que acesso a página de login
-    Quando submeto meu Login    
-    E submeto meu Password    
-    Então devo ser direcionado para área logada
+    Given que acesso a página de login
+    When submeto meu Login    
+    And submeto meu Password    
+    Then devo ser direcionado para área logada
 
 Caso de Teste 02: Cadastrando Guichê
-    Dado que clico em "Cadastrar Guichê"
-    E clico no botão "Novo Guichê"
-    E crio um novo guichê com o nome "Guichê Teste"
-    Então devo encontrar o novo "${GUICHE}" listado
+    Given que clico em "Cadastrar Guichê"
+    And clico no botão "Novo Guichê"
+    And crio um novo guichê com o nome "Guichê Teste"
+    Then devo encontrar o novo "${GUICHE}" listado
 
 Caso de Teste 03: Cadastrando Monitor
-    Dado que clico em "Cadastrar Monitor"
-    E clico no botão "Novo Monitor"
-    E adiciono um novo monitor chamado "Monitor Teste"
-    Então devo encontrar o novo "${MONITOR}" cadastrado
+    Given que clico em "Cadastrar Monitor"
+    And clico no botão "Novo Monitor"
+    And adiciono um novo monitor chamado "Monitor Teste"
+    Then devo encontrar o novo "${MONITOR}" cadastrado
 
 Caso de Teste 04: Cadastrando Serviço
-    Dado que clico em "Cadastrar Serviço"
-    E clico no botão "Novo Serviço"
-    E cadastro um novo serviço chamado "Serviço Teste"
-    Então devo encontrar o novo "${SERVIÇO}"
+    Given que clico em "Cadastrar Serviço"
+    And clico no botão "Novo Serviço"
+    And cadastro um novo serviço chamado "Serviço Teste"
+    Then devo encontrar o novo "${SERVIÇO}"
 
 Caso de Teste 05: Realizando uma chamada
-    Dado que clico em "Chamar Senha Avulsa"
-    E seleciono um Guichê
-    E Seleciono um Serviço
-    E digito uma Senha: "0"
-    E digito o nome a ser chamado: "Jefferson"
-    Então clico no botão Enviar
+    Given que clico em "Chamar Senha Avulsa"
+    And seleciono um Guichê
+    And Seleciono um Serviço
+    And digito uma Senha: "0"
+    And digito o nome a ser chamado: "Jefferson"
+    Then clico no botão Enviar
